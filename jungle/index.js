@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cardContainer = document.getElementById("card-container");
   
-    fetch("http://localhost:3000/Wildlife") 
+    fetch("https://json-server-1-uzvy.onrender.com/Wildlife") 
         .then(response => response.json())
         .then(data => {
             data.forEach(animal => {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   function fetchAnimalDetails(animal, card) {
-    fetch(`http://localhost:3000/Wildlife/${animal.id}`) 
+    fetch(`https://json-server-1-uzvy.onrender.com/Wildlife/${animal.id}`) 
         .then(response => response.json())
         .then(details => {
             displayAnimalDetails(animal, details, card);
